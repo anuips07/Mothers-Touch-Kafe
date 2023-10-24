@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="nav-cntr">
         <div className="nav-list">
           <div className="nav-cta nav-cta-l">
-            <img src={HomeIcon} />
+            <img src={HomeIcon} onClick={() => redirectPage("home")} />
           </div>
 
           <ul className="nav-left">
