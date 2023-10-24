@@ -1,0 +1,32 @@
+/* File: font.css */
+@font-face {
+  font-family: "AthenaRustic";
+  src: local("AthenaRustic"), url("./fonts/Athena-Rustic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AthenaRusticItalic";
+  src: local("AthenaRusticItalic"), url("./fonts/AthenaRusticItalic-L3GZW.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "BreakfastDistressed";
+  src: local("BreakfastDistressed"), url("./fonts/Breakfast-Distrassed.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #142432;
+}
+
+.main-cntr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 15%;
+}

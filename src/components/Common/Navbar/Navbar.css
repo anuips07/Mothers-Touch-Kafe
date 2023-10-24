@@ -1,0 +1,107 @@
+.nav-main-cntr {
+  display: grid;
+  place-items: center;
+}
+
+.nav-cntr {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  width: 100%;
+  margin: 0 1rem;
+}
+
+.nav-list ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-list ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.nav-left li {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.nav-right li {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.nav-list li a {
+  width: fit-content;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #d6d5d1;
+}
+
+.nav-list li a p {
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.active-nav {
+  border-bottom: 2px solid #ffdf08 !important;
+}
+
+.nav-cta {
+  margin-bottom: 1rem;
+}
+
+.nav-cta img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.nav-cta-l {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-cta-r {
+  display: flex;
+  justify-content: right;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-logo {
+  background: url("../../../images/navbar/LogoTag.png");
+  height: 150px;
+  width: 368px;
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.nav-logo img {
+  width: 70%;
+  animation: loadLogo 1s forwards ease-out;
+}
+
+@keyframes loadLogo {
+  0% {
+    transform: translate(-0.4rem, -1.2rem) rotate(-90deg);
+  }
+
+  100% {
+    transform: translate(-0.4rem, -1.2rem) rotate(0deg);
+  }
+}
