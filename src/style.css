@@ -30,3 +30,7 @@ body {
   justify-content: center;
   margin: 0 15%;
 }
+
+section {
+  width: 100%;
+}

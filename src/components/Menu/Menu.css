@@ -1,0 +1,134 @@
+.menu-header {
+  width: 100%;
+}
+
+.menu-cntr {
+  cursor: pointer;
+  display: flex;
+  min-height: 250px;
+  padding: 2rem 0;
+  margin: 2rem;
+  position: relative;
+}
+
+.menu-title {
+  flex: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.menu-title h1 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #ffdf08;
+  text-transform: uppercase;
+}
+
+.menu-title img {
+  position: absolute;
+  width: 200px;
+  top: 0;
+  transform: translate(0%, -5%);
+}
+
+.menu-title-r {
+  justify-content: right;
+}
+
+.menu-title-r img {
+  left: 5%;
+}
+
+.menu-title-l img {
+  right: 5%;
+}
+
+.menu-list {
+  flex: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-list ul {
+  list-style: none;
+}
+
+.menu-list li {
+  color: #f9f9f9;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.menu-list li::before {
+  content: "◼︎";
+  color: #ffdf08;
+  margin-right: 0.75rem;
+}
+
+.btm-r-border {
+  position: absolute;
+  bottom: -15%;
+  right: 0;
+  height: 3px;
+  width: 80%;
+  border-bottom: 1px dotted #ffdf08;
+}
+
+.btm-l-border {
+  position: absolute;
+  bottom: -15%;
+  left: 0;
+  height: 3px;
+  width: 80%;
+  border-bottom: 1px dotted #ffdf08;
+}
+
+.menu-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0000005e;
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.menu-modal-panel {
+  background-color: #ffff;
+  min-height: 300px;
+  min-width: 50%;
+  padding: 2rem;
+  border-radius: 5px;
+  position: relative;
+  animation: openModal 0.25s forwards ease-in;
+}
+
+@keyframes openModal {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-menu-modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.3rem;
+  color: #142432;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.close-menu-modal:hover {
+  opacity: 0.5;
+}
