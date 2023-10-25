@@ -8,7 +8,7 @@ import SearchIcon from "../../../images/navbar/search-icon.png";
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const [activeNav, setActiveNav] = useState("home");
+  const [activeNav, setActiveNav] = useState("/");
 
   const redirectPage = (path) => {
     navigate(`/${path}`);
@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="nav-cntr">
         <div className="nav-list">
           <div className="nav-cta nav-cta-l">
-            <img src={HomeIcon} onClick={() => redirectPage("home")} />
+            <img src={HomeIcon} onClick={() => redirectPage("")} />
           </div>
 
           <ul className="nav-left">
