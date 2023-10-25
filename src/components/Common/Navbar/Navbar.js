@@ -39,7 +39,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div className="nav-logo" onClick={() => redirectPage("home")}>
+        <div className="nav-logo" onClick={() => redirectPage("")}>
           <img src="./logo192.png" />
         </div>
 
