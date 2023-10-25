@@ -5,3 +5,31 @@
 .taste-home {
   width: 100%;
 }
+
+.about-cntr {
+  display: grid;
+  place-items: center;
+  margin: 2rem;
+}
+
+.about-cntr h1 {
+  font-size: 3rem;
+  font-family: BreakfastDistressed;
+  font-weight: 300;
+  color: #f9f9f9;
+  border-bottom: 5px solid #ffdf08;
+}
+
+.about-cntr p {
+  color: #f9f9f9;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.menu-home {
+  width: 100%;
+  margin: 2rem 0;
+  cursor: pointer;
+}

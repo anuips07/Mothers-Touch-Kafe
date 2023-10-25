@@ -11,7 +11,6 @@ export default function Navbar() {
   const [activeNav, setActiveNav] = useState("home");
 
   const redirectPage = (path) => {
-    console.log(path);
     navigate(`/${path}`);
   };
 
@@ -28,8 +27,8 @@ export default function Navbar() {
 
           <ul className="nav-left">
             <li>
-              <Link to={"Home"}>
-                <p className={activeNav === "home" ? "active-nav" : ""}> Home </p>
+              <Link to={"History"}>
+                <p className={activeNav === "history" ? "active-nav" : ""}> History </p>
               </Link>
             </li>
             <li>

@@ -1,0 +1,59 @@
+.contact-cntr {
+  display: flex;
+  padding: 2rem;
+  position: relative;
+}
+
+.contact-panel {
+  flex: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-l {
+  background-color: #e91f4f;
+  justify-content: center;
+}
+
+.social-cta {
+  display: flex;
+  justify-content: right;
+  gap: 3rem;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 1rem;
+}
+
+.social-cta img {
+  width: auto;
+  height: 100%;
+  filter: invert(1);
+}
+
+.map-img {
+  max-width: 100%;
+}
+
+.contact-r {
+  color: #f9f9f9;
+}
+
+.contact-r h1 {
+  font-size: 5rem;
+  font-family: AthenaRustic;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.contact-info {
+  line-height: 2;
+}
+
+.contact-info p {
+  padding: 1rem 0;
+}
+
+.contact-info p:not(:last-child) {
+  border-bottom: 0.5px solid #f9f9f92d;
+}
