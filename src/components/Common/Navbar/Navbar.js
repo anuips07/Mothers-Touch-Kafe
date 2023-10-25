@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { Link, redirect, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import HomeIcon from "../../../images/navbar/home-icon.png";
 import SearchIcon from "../../../images/navbar/search-icon.png";
+import QuestionIcon from "../../../images/navbar/question.png";
 
 export default function Navbar() {
   const location = useLocation();
@@ -45,7 +46,7 @@ export default function Navbar() {
 
         <div className="nav-list">
           <div className="nav-cta nav-cta-r">
-            <img src={HomeIcon} />
+            <img src={QuestionIcon} style={{ width: "15px" }} />
             <img src={SearchIcon} />
           </div>
 
