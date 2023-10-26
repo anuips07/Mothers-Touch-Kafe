@@ -80,7 +80,7 @@
 }
 
 .nav-logo {
-  background: url("../../../images/navbar/LogoTag.png");
+  background: url("../../../../public/images//navbar/LogoTag.png");
   height: 150px;
   width: 368px;
   background-size: 150px 150px;

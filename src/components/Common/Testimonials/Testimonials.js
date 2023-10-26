@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./Testimonials.css";
-import MsgBubble from "../../../images/testimonials/Msg-Bubble.png";
 import { TestimonialData } from "./TestimonialData";
-import UserIcon from "../../../images/testimonials/User-Icon.png";
 
 export default function Testimonials() {
   const [testData, setTestData] = useState(TestimonialData[0]);
@@ -28,12 +26,12 @@ export default function Testimonials() {
 
       <div className="test-l test-panel">
         <div className="test-header">
-          <img src={MsgBubble} />
+          <img src="/images/testimonials/Msg-Bubble.png" />
           <h1>Testim</h1>
         </div>
 
         <div className="user-cntr">
-          <img src={UserIcon} />
+          <img src="/images/testimonials/User-Icon.png" />
           <h2>{testData?.name}</h2>
 
           <div className="rating-cntr">

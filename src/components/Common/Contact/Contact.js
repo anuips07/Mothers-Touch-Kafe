@@ -1,21 +1,25 @@
 import React from "react";
 import "./Contact.css";
-import Map from "../../../images/contact/map.png";
-import Fb from "../../../images/contact/fb.png";
-import Insta from "../../../images/contact/insta.png";
-import Whatsapp from "../../../images/contact/whatsapp.png";
 
 export default function Contact() {
   return (
     <div className="contact-cntr">
       <div className="contact-l contact-panel">
         <div className="social-cta">
-          <img src={Fb} />
-          <img src={Insta} />
-          <img src={Whatsapp} />
+          <div className="social-b-border">
+            <img src="/images/contact/fb.png" style={{ height: "30px", width: "auto" }} />
+          </div>
+
+          <div className="social-b-border">
+            <img src="/images/contact/insta.png" />
+          </div>
+
+          <div className="social-b-border">
+            <img src="/images/contact/whatsapp.png" />
+          </div>
         </div>
 
-        <img className="map-img" src={Map} />
+        <img className="map-img" src="/images/contact/map.png" />
       </div>
 
       <div className="contact-r contact-panel">

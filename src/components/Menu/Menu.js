@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./Menu.css";
-import MenuHeader from "../../images/menu/Menu-Header.png";
-import BeverageIcon from "../../images/menu/Vector-Smart Object.png";
+import { MenuList } from "./MenuList";
 
 export default function Menu() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState(null);
+
+  const handleMenu = (menu) => {
+    if (!openMenu) {
+      setSelectedMenu(menu);
+    } else {
+      setSelectedMenu(null);
+    }
+    setOpenMenu((prev) => !prev);
+  };
 
   useEffect(() => {
     if (openMenu) {
@@ -15,26 +24,59 @@ export default function Menu() {
   }, [openMenu]);
   return (
     <section>
-      <img src={MenuHeader} className="menu-header" />
+      <img src="/images/menu/Menu-Header.png" className="menu-header" />
 
-      <div className="menu-cntr">
+      {MenuList.map((list, index) => {
+        return (
+          <div key={list.menuType + index} className="menu-cntr">
+            {(index + 1) % 2 !== 0 && (
+              <div className="menu-title menu-title-l">
+                <h1>{list.menuType}</h1>
+                <img src={list.menuImage} />
+              </div>
+            )}
+
+            <div className="menu-list">
+              <ul>
+                {list.mainMenu.map((menuList, indx) => {
+                  return (
+                    <li key={menuList.mainMenuName + indx} onClick={() => handleMenu(menuList)}>
+                      {menuList.mainMenuName}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            {(index + 1) % 2 === 0 && (
+              <div className="menu-title menu-title-r">
+                <h1>{list.menuType}</h1>
+                <img src={list.menuImage} />
+              </div>
+            )}
+
+            {index < MenuList.length - 1 && <div className={(index + 1) % 2 === 0 ? "menu-title btm-l-border" : "menu-title btm-r-border"}></div>}
+          </div>
+        );
+      })}
+
+      {/* <div className="menu-cntr">
         <div className="menu-title menu-title-l">
           <h1>Beverages</h1>
-          <img src={BeverageIcon} />
+          <img src="/images/menu/Vector-Smart Object.png" />
         </div>
 
         <div className="menu-list">
           <ul>
-            <li
-              onClick={() => {
-                setOpenMenu(true);
-              }}>
-              Juices
-            </li>
+            <li>Juices</li>
             <li>Milkshakes</li>
             <li>Health juice</li>
             <li>Protein shake</li>
             <li>Lassi</li>
+
+            {MenuList.map((menu, index) => {
+              return menu.menuType === "Breakfast" && <li>{}</li>;
+            })}
           </ul>
         </div>
 
@@ -53,7 +95,7 @@ export default function Menu() {
 
         <div className="menu-title menu-title-r">
           <h1>Breakfast Items</h1>
-          <img src={BeverageIcon} />
+          <img src="/images/menu/Vector-Smart Object.png" />
         </div>
 
         <div className="btm-l-border"></div>
@@ -62,7 +104,7 @@ export default function Menu() {
       <div className="menu-cntr">
         <div className="menu-title menu-title-l">
           <h1>Main Courses</h1>
-          <img src={BeverageIcon} />
+          <img src="/images/menu/Vector-Smart Object.png" />
         </div>
 
         <div className="menu-list">
@@ -89,7 +131,7 @@ export default function Menu() {
 
         <div className="menu-title menu-title-r">
           <h1>Lighter Fare</h1>
-          <img src={BeverageIcon} />
+          <img src="/images/menu/Vector-Smart Object.png" />
         </div>
 
         <div className="btm-l-border"></div>
@@ -98,7 +140,7 @@ export default function Menu() {
       <div className="menu-cntr">
         <div className="menu-title menu-title-l">
           <h1>Snacks and Fast Food</h1>
-          <img src={BeverageIcon} />
+          <img src="/images/menu/Vector-Smart Object.png" />
         </div>
 
         <div className="menu-list">
@@ -107,24 +149,25 @@ export default function Menu() {
             <li>Chats (snack-like items)</li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {openMenu && (
         <div className="menu-modal">
           <div className="menu-modal-panel">
-            <p className="close-menu-modal" onClick={() => setOpenMenu(false)}>
-              ✖︎
-            </p>
+            <div className="menu-modal-header">
+              <h3>{selectedMenu.mainMenuName}</h3>
+              <p className="close-menu-modal" onClick={() => setOpenMenu(false)}>
+                ✖︎
+              </p>
+            </div>
 
-            <ul>
-              <li>Watermelon Juice</li>
-              <li>Grape Juice</li>
-              <li>Sweet Lime Juice</li>
-              <li>Pineapple Juice</li>
-              <li>Orange Juice</li>
-              <li>Gooseberry Juice</li>
-              <li>Butter Juice</li>
-            </ul>
+            <div className="submenu-cntr">
+              <ul>
+                {selectedMenu.subMenu.map((subMenuList, index) => {
+                  return <li key={subMenuList + index}>{subMenuList}</li>;
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       )}

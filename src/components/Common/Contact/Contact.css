@@ -21,14 +21,21 @@
   justify-content: right;
   gap: 3rem;
   width: 100%;
-  height: 30px;
   margin-bottom: 1rem;
 }
 
 .social-cta img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   filter: invert(1);
+}
+
+.social-b-border {
+  width: 30px;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f9f9f9;
+  display: grid;
+  place-items: center;
 }
 
 .map-img {
