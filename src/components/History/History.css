@@ -1,0 +1,23 @@
+.history-cntr {
+  display: flex;
+  align-items: center;
+}
+
+.history-img {
+  height: 100%;
+  padding: 1rem;
+}
+
+.history-img img {
+  height: 100%;
+}
+
+.history-info {
+  flex: 1;
+  padding: 1rem;
+  color: #f9f9f9;
+  line-height: 2;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: justify;
+}
