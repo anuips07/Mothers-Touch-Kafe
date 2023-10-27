@@ -1,22 +1,36 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Common/Navbar/Navbar";
 import Contact from "./components/Common/Contact/Contact";
-import "./style.css";
 import MtFooter from "./components/Common/MtFooter/MtFooter";
 
 export default function App() {
+  const [defaultLoader, setDefaultLoader] = useState(true);
   const contactRef = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDefaultLoader(false);
+    }, [1500]);
+  }, []);
 
   return (
     <div className="main-cntr">
-      <Navbar contactRef={contactRef} />
+      {defaultLoader ? (
+        <div className="default-loader">
+          <img src="./logo192.png" />
+        </div>
+      ) : (
+        <>
+          <Navbar contactRef={contactRef} />
 
-      <Outlet />
+          <Outlet />
 
-      <Contact ref={contactRef} />
+          <Contact ref={contactRef} />
 
-      <MtFooter />
+          <MtFooter />
+        </>
+      )}
     </div>
   );
 }
