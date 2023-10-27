@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./Contact.css";
 
-export default function Contact() {
+const Contact = forwardRef((props, ref) => {
   return (
-    <div className="contact-cntr">
+    <div className="contact-cntr" ref={ref}>
       <div className="contact-l contact-panel">
         <div className="social-cta">
           <div className="social-b-border">
@@ -34,4 +34,6 @@ export default function Contact() {
       </div>
     </div>
   );
-}
+});
+
+export default Contact;

@@ -3,13 +3,18 @@ import "./Navbar.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-export default function Navbar() {
+export default function Navbar({ contactRef }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeNav, setActiveNav] = useState("/");
 
   const redirectPage = (path) => {
     navigate(`/${path}`);
+  };
+
+  const scrollToContact = (e) => {
+    e.preventDefault();
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -53,7 +58,7 @@ export default function Navbar() {
                 <p className={activeNav === "services" ? "active-nav" : ""}> Services </p>
               </Link>
             </li>
-            <li>
+            <li onClick={scrollToContact}>
               <a href="#">
                 <p className={activeNav === "contact" ? "active-nav" : ""}> Contact </p>
               </a>
