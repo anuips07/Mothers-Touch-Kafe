@@ -28,8 +28,8 @@
 .menu-title img {
   position: absolute;
   width: 200px;
-  top: 0;
-  transform: translate(0%, -5%);
+  top: 50%;
+  transform: translate(0%, -50%);
 }
 
 .menu-title-r {
@@ -99,7 +99,6 @@
 
 .menu-modal-panel {
   background-color: #ffff;
-  /* max-height: 80%; */
   min-width: 300px;
   max-width: 90%;
   padding: 1rem;

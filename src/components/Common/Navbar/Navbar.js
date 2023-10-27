@@ -54,9 +54,9 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to={"Menu"}>
+              <a href="#">
                 <p className={activeNav === "contact" ? "active-nav" : ""}> Contact </p>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
