@@ -92,7 +92,7 @@
 }
 
 .rating-active {
-  animation: activeRating 10s infinite ease-in-out;
+  animation: activeRating 10s infinite linear;
 }
 
 @keyframes activeRating {
