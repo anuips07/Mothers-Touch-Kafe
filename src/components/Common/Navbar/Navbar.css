@@ -11,7 +11,7 @@
 }
 
 .menu-hamburger {
-  direction: none;
+  display: none;
 }
 
 .nav-list {
@@ -121,6 +121,7 @@
 
 @media only screen and (max-width: 768px) {
   .menu-hamburger {
+    display: block;
     width: 50px;
     fill: white;
     position: fixed;

@@ -40,11 +40,9 @@ export default function Navbar({ contactRef }) {
   return (
     <div className="nav-main-cntr">
       <div className="nav-cntr">
-        {!showMenu && (
-          <svg className="menu-hamburger" onClick={handleMenu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="hamburger-menu">
-            <path d="M26,3H6A3,3,0,0,0,3,6V26a3,3,0,0,0,3,3H26a3,3,0,0,0,3-3V6A3,3,0,0,0,26,3ZM21,21H11a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Zm0-4H11a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Zm0-4H11a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z" data-name="hamburger menu"></path>
-          </svg>
-        )}
+        <svg className="menu-hamburger" onClick={handleMenu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="hamburger-menu">
+          <path d="M26,3H6A3,3,0,0,0,3,6V26a3,3,0,0,0,3,3H26a3,3,0,0,0,3-3V6A3,3,0,0,0,26,3ZM21,21H11a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Zm0-4H11a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Zm0-4H11a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z" data-name="hamburger menu"></path>
+        </svg>
 
         <div className="nav-list">
           <div className="nav-cta nav-cta-l">
