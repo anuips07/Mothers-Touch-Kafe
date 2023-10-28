@@ -1,7 +1,6 @@
 .contact-cntr {
   display: flex;
   padding: 2rem;
-  position: relative;
 }
 
 .contact-panel {
@@ -27,7 +26,6 @@
 .social-cta img {
   width: 100%;
   height: auto;
-  filter: invert(1);
 }
 
 .social-b-border {
