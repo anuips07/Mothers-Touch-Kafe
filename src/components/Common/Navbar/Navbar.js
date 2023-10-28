@@ -7,14 +7,31 @@ export default function Navbar({ contactRef }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeNav, setActiveNav] = useState("/");
+  const [showMenu, setShowMenu] = useState(false);
 
   const redirectPage = (path) => {
+    window.scrollTo(0, 0);
+    if (showMenu) {
+      handleMenu();
+    }
     navigate(`/${path}`);
   };
 
   const scrollToContact = (e) => {
     e.preventDefault();
+    if (showMenu) {
+      handleMenu();
+    }
     contactRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleMenu = () => {
+    if (showMenu) {
+      document.body.style.overflow = "";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+    setShowMenu((prev) => !prev);
   };
 
   useEffect(() => {
@@ -23,6 +40,12 @@ export default function Navbar({ contactRef }) {
   return (
     <div className="nav-main-cntr">
       <div className="nav-cntr">
+        {!showMenu && (
+          <svg className="menu-hamburger" onClick={handleMenu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="hamburger-menu">
+            <path d="M26,3H6A3,3,0,0,0,3,6V26a3,3,0,0,0,3,3H26a3,3,0,0,0,3-3V6A3,3,0,0,0,26,3ZM21,21H11a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Zm0-4H11a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Zm0-4H11a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z" data-name="hamburger menu"></path>
+          </svg>
+        )}
+
         <div className="nav-list">
           <div className="nav-cta nav-cta-l">
             <img src="/images/navbar/home-icon.png" onClick={() => redirectPage("")} />
@@ -44,7 +67,7 @@ export default function Navbar({ contactRef }) {
 
         <div className="nav-logo" onClick={() => redirectPage("")}>
           <img src="./logo192.png" />
-          <img className="logo-bg" src="/images//navbar/LogoTag.png" />
+          <img className="logo-bg" src="/images/navbar/LogoTag.png" />
         </div>
 
         <div className="nav-list">
@@ -67,6 +90,38 @@ export default function Navbar({ contactRef }) {
           </ul>
         </div>
       </div>
+
+      {showMenu && (
+        <div className="resp-menu">
+          <div className="resp-menu-cntr">
+            <div>
+              <svg className="close-resp-menu" onClick={handleMenu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.41 331.18" id="close">
+                <path d="M486.43,98.09,423.1,27.72A83.85,83.85,0,0,0,360.86,0H83.74A83.83,83.83,0,0,0,0,83.74v163.7a83.84,83.84,0,0,0,83.74,83.74H360.86a83.89,83.89,0,0,0,62.24-27.72l63.33-70.37A100.7,100.7,0,0,0,486.43,98.09ZM288.91,222.52,267.7,243.74l-53.28-53.28-53.28,53.28-21.22-21.22,53.29-53.28L139.92,116l21.22-21.21L214.42,148,267.7,94.75,288.91,116l-53.28,53.28Z" data-name="Layer 2"></path>
+              </svg>
+
+              <ul>
+                <li className={activeNav === "" ? "active-nav" : ""} onClick={() => redirectPage("")}>
+                  <p> Home </p>
+                </li>
+                <li className={activeNav === "history" ? "active-nav" : ""} onClick={() => redirectPage("History")}>
+                  <p> History </p>
+                </li>
+                <li className={activeNav === "menu" ? "active-nav" : ""} onClick={() => redirectPage("Menu")}>
+                  <p> Menu </p>
+                </li>
+                <li className={activeNav === "contact" ? "active-nav" : ""} onClick={scrollToContact}>
+                  <p> Contact </p>
+                </li>
+              </ul>
+            </div>
+
+            <div className="resp-nav-logo" onClick={() => redirectPage("")}>
+              <img src="./logo192.png" />
+              <p>Mother's Touch Kafe</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

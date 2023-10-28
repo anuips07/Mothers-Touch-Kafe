@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.menu-hamburger {
+  direction: none;
+}
+
 .nav-list {
   width: 100%;
   margin: 0 1rem;
@@ -116,6 +120,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .menu-hamburger {
+    width: 50px;
+    fill: white;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+  }
+
   .nav-list {
     display: none;
   }
@@ -134,5 +147,88 @@
 
   .logo-bg {
     height: 100% !important;
+  }
+
+  .resp-menu {
+    background-color: #ffde0819;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 2;
+    animation: openRespMenu 0.5s forwards ease-in-out;
+    backdrop-filter: blur(5px);
+  }
+
+  @keyframes openRespMenu {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  .resp-menu-cntr {
+    background-color: #142432;
+    width: 50%;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .close-resp-menu {
+    width: 50px;
+    height: 50px;
+    fill: #ffdf08;
+  }
+
+  .resp-menu ul {
+    list-style: none;
+  }
+
+  .resp-menu li {
+    color: #f9f9f9;
+    padding: 2rem 1rem;
+    transition: all 0.25s ease-in;
+  }
+
+  .resp-menu p {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 1.4rem;
+  }
+
+  .active-nav {
+    background-color: #ffdf08;
+    color: #142432 !important;
+  }
+
+  .active-nav p {
+    color: #142432 !important;
+    font-weight: 600;
+  }
+
+  .resp-nav-logo {
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
+
+  .resp-nav-logo img {
+    width: 80px;
+  }
+
+  .resp-nav-logo p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #f9f9f9;
+    font-family: BreakfastDistressed;
   }
 }
