@@ -218,7 +218,8 @@
   .resp-nav-logo {
     display: grid;
     place-items: center;
-    padding: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 
   .resp-nav-logo img {
