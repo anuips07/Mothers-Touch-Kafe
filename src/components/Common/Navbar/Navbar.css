@@ -92,6 +92,7 @@
 .logo-bg {
   z-index: -1;
   height: calc(100% + 20px) !important;
+  animation: none;
 }
 
 .nav-logo img {
@@ -110,5 +111,27 @@
 
   100% {
     transform: translate(-50%, -25%) rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .nav-logo {
+    padding-bottom: 0rem;
+    height: 100px;
+    width: 350px;
+  }
+
+  .nav-logo img {
+    height: 70px;
+    left: 50%;
+    top: 16%;
+  }
+
+  .logo-bg {
+    height: 100% !important;
   }
 }
