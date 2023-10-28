@@ -92,7 +92,8 @@
 .logo-bg {
   z-index: -1;
   height: calc(100% + 20px) !important;
-  animation: none;
+  animation: none !important;
+  transform: translate(-50%, -25%);
 }
 
 .nav-logo img {
@@ -122,7 +123,7 @@
   .nav-logo {
     padding-bottom: 0rem;
     height: 100px;
-    width: 350px;
+    width: 100%;
   }
 
   .nav-logo img {

@@ -29,12 +29,16 @@ export default function Menu() {
       {MenuList.map((list, index) => {
         return (
           <div key={list.menuType + index} className="menu-cntr">
+            <img className="resp-menu-img" src={list.menuImage} />
+
             {(index + 1) % 2 !== 0 && (
               <div className="menu-title menu-title-l">
                 <h1>{list.menuType}</h1>
                 <img src={list.menuImage} />
               </div>
             )}
+
+            <h1 className="resp-title">{list.menuType}</h1>
 
             <div className="menu-list">
               <ul>
@@ -77,7 +81,12 @@ export default function Menu() {
             <div className="submenu-cntr">
               <ul>
                 {selectedMenu.subMenu.map((subMenuList, index) => {
-                  return <li key={subMenuList + index}>{subMenuList}</li>;
+                  return (
+                    <li key={subMenuList + index}>
+                      <p>✦</p>
+                      <p>{subMenuList}</p>
+                    </li>
+                  );
                 })}
               </ul>
             </div>

@@ -11,11 +11,19 @@
   position: relative;
 }
 
+.resp-menu-img {
+  display: none;
+}
+
 .menu-title {
   flex: 50%;
   position: relative;
   display: flex;
   align-items: center;
+}
+
+.resp-title {
+  display: none;
 }
 
 .menu-title h1 {
@@ -50,6 +58,15 @@
   flex: 50%;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.menu-list img {
+  display: none;
+  position: absolute;
+  width: 150px;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
 
 .menu-list ul {
@@ -169,15 +186,99 @@
 
 .submenu-cntr ul {
   list-style: none;
-  line-height: 2.5;
+  line-height: 1.5;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2rem;
   row-gap: 0.5rem;
 }
 
-.submenu-cntr li::before {
-  content: "✦";
+.submenu-cntr li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.submenu-cntr p:first-child {
   color: #142432;
-  margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-cntr {
+    flex-direction: column;
+    margin: 0 1rem 2rem 1rem;
+    padding: 0 !important;
+    min-height: 150px;
+    display: block;
+  }
+
+  .menu-cntr:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .resp-menu-img {
+    display: block;
+    position: absolute;
+    width: 120px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    opacity: 0.4;
+  }
+
+  .menu-title-l,
+  .menu-title-r {
+    display: none;
+  }
+
+  .resp-title {
+    display: block !important;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ffdf08;
+    text-transform: uppercase;
+  }
+
+  .menu-list {
+    padding: 1rem 0;
+  }
+
+  .menu-list li {
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  .menu-title img {
+    display: none;
+  }
+
+  .menu-list img {
+    display: block;
+    right: 0%;
+    opacity: 0.3;
+    width: 120px;
+  }
+
+  .btm-l-border,
+  .btm-r-border {
+    bottom: 0% !important;
+    width: 100%;
+  }
+
+  .menu-modal-header {
+    min-height: 110px;
+  }
+
+  .menu-modal-header h3 {
+    margin: 0 1.2rem 1rem 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .submenu-cntr {
+    max-height: 60vh;
+  }
+
+  .submenu-cntr ul {
+    font-size: 0.9rem;
+    column-gap: 0.5rem;
+  }
 }
