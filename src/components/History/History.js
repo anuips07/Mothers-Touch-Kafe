@@ -17,11 +17,15 @@ export default function History() {
       </div>
 
       <div className="history-cntr">
+        <div className="history-img resp-history-img">
+          <img src="/images/history/Img2.png" alt="Img1" />
+        </div>
+
         <div className="history-info">
           <p>Beyond numbers, it's the shared moments of joy that define our legacy. With a personal touch, we've had the privilege of serving and sharing in the happiness of over 2000 patrons, etching unforgettable memories. Notably, our cakes have graced the tables of 100 discerning customers, infusing sweetness into their special moments. From intimate gatherings to opulent wedding affairs, Mother's Touch Kafe has emerged as the go-to choice for those seeking to weave flavor into their cherished events.</p>
         </div>
 
-        <div className="history-img">
+        <div className="history-img resp-history-img2">
           <img src="/images/history/Img2.png" alt="Img1" />
         </div>
       </div>

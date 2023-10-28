@@ -68,4 +68,8 @@
     flex-direction: column-reverse;
     padding: 0;
   }
+
+  .contact-r h1 {
+    font-size: 4rem;
+  }
 }

@@ -12,6 +12,10 @@
   height: 100%;
 }
 
+.resp-history-img {
+  display: none;
+}
+
 .history-info {
   flex: 1;
   padding: 1rem;
@@ -20,4 +24,27 @@
   font-size: 1.2rem;
   font-weight: 300;
   text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+  .history-cntr {
+    flex-direction: column;
+  }
+
+  .resp-history-img {
+    display: block;
+  }
+
+  .resp-history-img2 {
+    display: none;
+  }
+
+  .history-img {
+    height: 200px;
+  }
+
+  .history-info {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
 }
