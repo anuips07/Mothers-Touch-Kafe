@@ -80,28 +80,35 @@
 }
 
 .nav-logo {
-  background: url("../../../../public/images//navbar/LogoTag.png");
   height: 150px;
   width: 368px;
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
   display: grid;
   place-items: center;
   padding: 1rem;
   cursor: pointer;
+  position: relative;
+}
+
+.logo-bg {
+  z-index: -1;
+  height: calc(100% + 20px) !important;
 }
 
 .nav-logo img {
-  width: 70%;
+  height: 100px;
+  width: auto;
+  position: absolute;
+  top: 25%;
+  left: 50%;
   animation: loadLogo 1s forwards ease-out;
 }
 
 @keyframes loadLogo {
   0% {
-    transform: translate(-0.4rem, -1.2rem) rotate(-90deg);
+    transform: translate(-50%, -25%) rotate(-90deg);
   }
 
   100% {
-    transform: translate(-0.4rem, -1.2rem) rotate(0deg);
+    transform: translate(-50%, -25%) rotate(0deg);
   }
 }

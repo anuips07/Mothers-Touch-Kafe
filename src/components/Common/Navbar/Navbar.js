@@ -44,6 +44,7 @@ export default function Navbar({ contactRef }) {
 
         <div className="nav-logo" onClick={() => redirectPage("")}>
           <img src="./logo192.png" />
+          <img className="logo-bg" src="/images//navbar/LogoTag.png" />
         </div>
 
         <div className="nav-list">
