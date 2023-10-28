@@ -28,6 +28,7 @@ export default function Testimonials() {
         <div className="test-header">
           <img src="/images/testimonials/Msg-Bubble.png" />
           <h1>Testim</h1>
+          <h1 className="resp-test-header">onials</h1>
         </div>
 
         <div className="user-cntr">
