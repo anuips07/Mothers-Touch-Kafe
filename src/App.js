@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./components/Common/Navbar/Navbar";
 import Contact from "./components/Common/Contact/Contact";
 import MtFooter from "./components/Common/MtFooter/MtFooter";
+import LogoLoader from "./logo.svg";
 
 export default function App() {
   const [defaultLoader, setDefaultLoader] = useState(true);
@@ -18,7 +19,7 @@ export default function App() {
     <div className="main-cntr">
       {defaultLoader ? (
         <div className="default-loader">
-          <img src="./images/logo.png" alt="logo loader" />
+          <img src={LogoLoader} alt="logo loader" />
         </div>
       ) : (
         <>

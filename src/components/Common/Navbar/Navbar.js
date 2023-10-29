@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import "./Navbar.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Logo from "../../../logo.svg";
 
 export default function Navbar({ contactRef }) {
   const location = useLocation();
@@ -93,7 +94,7 @@ export default function Navbar({ contactRef }) {
         </div>
 
         <div className="nav-logo" onClick={() => redirectPage("")}>
-          <img src="./images/logo.png" alt="logo" />
+          <img src={Logo} alt="logo" />
           <img className="logo-bg" src="/images/navbar/LogoTag.png" alt="logo-bg" />
         </div>
 
@@ -173,7 +174,7 @@ export default function Navbar({ contactRef }) {
             </div>
 
             <div className="resp-nav-logo" onClick={() => redirectPage("")}>
-              <img src="./images/logo.png" alt="logo" />
+              <img src={Logo} alt="logo" />
               <p>Mother's Touch Kafe</p>
             </div>
           </div>
