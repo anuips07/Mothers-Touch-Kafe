@@ -42,7 +42,7 @@ export default function Navbar({ contactRef }) {
 
   const handleCakeService = () => {
     handleServices();
-    navigate("/Menu?menuSelect=Cakes");
+    navigate("/Menu/Cakes");
   };
 
   useEffect(() => {
@@ -116,9 +116,9 @@ export default function Navbar({ contactRef }) {
               )}
             </li>
             <li onClick={scrollToContact}>
-              <a href="#">
+              <div className="contact-cta">
                 <p className={activeNav === "contact" ? "active-nav" : ""}> Contact </p>
-              </a>
+              </div>
             </li>
           </ul>
         </div>

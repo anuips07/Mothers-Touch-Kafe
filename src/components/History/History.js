@@ -4,11 +4,11 @@ import "./History.css";
 export default function History() {
   return (
     <section>
-      <img src="/images/history/History-Header.jpg" className="menu-header" />
+      <img src="/images/history/History-Header.jpg" className="menu-header" alt="history banner" />
 
       <div className="history-cntr">
         <div className="history-img">
-          <img src="/images/history/icon-1.svg" alt="Img1" />
+          <img src="/images/history/icon-1.svg" alt="history icon 1" />
         </div>
 
         <div className="history-info">
@@ -18,7 +18,7 @@ export default function History() {
 
       <div className="history-cntr">
         <div className="history-img resp-history-img">
-          <img src="/images/history/icon-2.svg" alt="Img2" />
+          <img src="/images/history/icon-2.svg" alt="history icon 2" />
         </div>
 
         <div className="history-info">
@@ -26,13 +26,13 @@ export default function History() {
         </div>
 
         <div className="history-img resp-history-img2">
-          <img src="/images/history/icon-2.svg" alt="Img2" />
+          <img src="/images/history/icon-2.svg" alt="history icon 2" />
         </div>
       </div>
 
       <div className="history-cntr">
         <div className="history-img">
-          <img src="/images/history/icon-3.svg" alt="Img3" />
+          <img src="/images/history/icon-3.svg" alt="history icon 3" />
         </div>
 
         <div className="history-info">

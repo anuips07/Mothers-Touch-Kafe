@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import { MenuList } from "./MenuList";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Menu({ openCakes }) {
   const [openMenu, setOpenMenu] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
+  const { menuSelect } = useParams();
 
   const handleMenu = (menu) => {
     if (!openMenu) {
@@ -27,7 +26,7 @@ export default function Menu({ openCakes }) {
   }, [openMenu]);
 
   useEffect(() => {
-    if (queryParams.get("menuSelect") === "Cakes") {
+    if (menuSelect === "Cakes") {
       const cakeMainMenuIndx = MenuList.findIndex((menu) => menu.menuType === "Cakes & Treats");
       if (cakeMainMenuIndx > -1) {
         const cakeMenuIndx = MenuList[cakeMainMenuIndx].mainMenu.findIndex((menu) => menu.mainMenuName === "Cakes");
@@ -37,7 +36,7 @@ export default function Menu({ openCakes }) {
         }
       }
     }
-  }, [location]);
+  }, [menuSelect]);
   return (
     <section>
       <img src="/images/menu/Menu-Banner.svg" className="menu-header" alt="menu banner" />
@@ -45,12 +44,12 @@ export default function Menu({ openCakes }) {
       {MenuList.map((list, index) => {
         return (
           <div key={list.menuType + index} className="menu-cntr">
-            <img className="resp-menu-img" src={list.menuImage} alt="menu image" />
+            <img className="resp-menu-img" src={list.menuImage} alt="menu resp icon" />
 
             {(index + 1) % 2 !== 0 && (
               <div className="menu-title menu-title-l">
                 <h1>{list.menuType}</h1>
-                <img src={list.menuImage} alt="menu image" />
+                <img src={list.menuImage} alt="menu left icon" />
               </div>
             )}
 
@@ -71,7 +70,7 @@ export default function Menu({ openCakes }) {
             {(index + 1) % 2 === 0 && (
               <div className="menu-title menu-title-r">
                 <h1>{list.menuType}</h1>
-                <img src={list.menuImage} alt="menu image" />
+                <img src={list.menuImage} alt="menu right icon" />
               </div>
             )}
 

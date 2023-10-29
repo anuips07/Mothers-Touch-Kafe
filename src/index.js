@@ -26,6 +26,10 @@ const router = createBrowserRouter([
         path: "menu",
         element: <Menu />,
       },
+      {
+        path: "menu/:menuSelect",
+        element: <Menu />,
+      },
     ],
   },
 ]);

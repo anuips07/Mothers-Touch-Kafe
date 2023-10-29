@@ -45,7 +45,8 @@
 }
 
 .nav-list li a,
-#services {
+#services,
+.contact-cta {
   width: fit-content;
   font-size: 1.2rem;
   font-weight: 500;
@@ -53,11 +54,13 @@
   color: #d6d5d1;
 }
 
-#services {
+#services,
+.contact-cta {
   cursor: pointer;
 }
 
-.nav-list li p {
+.nav-list li p,
+.contact-cta p {
   padding-bottom: 0.25rem;
   border-bottom: 2px solid transparent;
   transition: all 0.2s ease-in-out;
