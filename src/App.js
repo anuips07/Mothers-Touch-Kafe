@@ -18,7 +18,7 @@ export default function App() {
     <div className="main-cntr">
       {defaultLoader ? (
         <div className="default-loader">
-          <img src="./logo192.png" alt="logo loader" />
+          <img src="./images/logo.png" alt="logo loader" />
         </div>
       ) : (
         <>

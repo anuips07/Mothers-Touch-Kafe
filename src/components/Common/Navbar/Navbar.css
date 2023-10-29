@@ -235,6 +235,7 @@
     background-color: #142432;
     width: 80%;
     height: 100vh;
+    overflow-y: scroll;
     padding: 1rem;
     display: flex;
     flex-direction: column;

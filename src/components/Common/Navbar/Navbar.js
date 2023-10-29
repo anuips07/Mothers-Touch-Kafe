@@ -93,7 +93,7 @@ export default function Navbar({ contactRef }) {
         </div>
 
         <div className="nav-logo" onClick={() => redirectPage("")}>
-          <img src="./logo192.png" alt="logo" />
+          <img src="./images/logo.png" alt="logo" />
           <img className="logo-bg" src="/images/navbar/LogoTag.png" alt="logo-bg" />
         </div>
 
@@ -173,7 +173,7 @@ export default function Navbar({ contactRef }) {
             </div>
 
             <div className="resp-nav-logo" onClick={() => redirectPage("")}>
-              <img src="./logo192.png" alt="logo" />
+              <img src="./images/logo.png" alt="logo" />
               <p>Mother's Touch Kafe</p>
             </div>
           </div>
