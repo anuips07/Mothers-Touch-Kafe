@@ -10,6 +10,7 @@ export default function Navbar({ contactRef }) {
   const [activeNav, setActiveNav] = useState("/");
   const [showMenu, setShowMenu] = useState(false);
   const [showServices, setShowServices] = useState(false);
+  const [showRespServices, setShowRespServices] = useState(false);
 
   const redirectPage = (path) => {
     window.scrollTo(0, 0);
@@ -30,6 +31,7 @@ export default function Navbar({ contactRef }) {
   const handleMenu = () => {
     if (showMenu) {
       document.body.style.overflow = "";
+      setShowRespServices(false);
     } else {
       document.body.style.overflow = "hidden";
     }
@@ -42,6 +44,9 @@ export default function Navbar({ contactRef }) {
 
   const handleCakeService = () => {
     handleServices();
+    if (showMenu) {
+      handleMenu();
+    }
     navigate("/Menu/Cakes");
   };
 
@@ -141,6 +146,25 @@ export default function Navbar({ contactRef }) {
                 </li>
                 <li className={activeNav === "menu" ? "active-nav" : ""} onClick={() => redirectPage("Menu")}>
                   <p> Menu </p>
+                </li>
+                <li>
+                  <div
+                    onClick={() => {
+                      setShowRespServices((prev) => !prev);
+                    }}>
+                    <p className={activeNav === "services" ? "active-nav" : ""}> Services </p>
+                  </div>
+
+                  {showRespServices && (
+                    <div className="resp-serv-menu">
+                      <ul>
+                        <li>Corporate Services</li>
+                        <li>Catering Services</li>
+                        <li onClick={handleCakeService}>Cakes & Treats</li>
+                        <li>One-Stop Beverage</li>
+                      </ul>
+                    </div>
+                  )}
                 </li>
                 <li className={activeNav === "contact" ? "active-nav" : ""} onClick={scrollToContact}>
                   <p> Contact </p>

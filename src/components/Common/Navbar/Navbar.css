@@ -14,6 +14,10 @@
   display: none;
 }
 
+.resp-menu {
+  display: none;
+}
+
 .nav-list {
   width: 100%;
   margin: 0 1rem;
@@ -204,6 +208,7 @@
   }
 
   .resp-menu {
+    display: block;
     background-color: #ffde0819;
     height: 100vh;
     width: 100vw;
@@ -285,5 +290,13 @@
     letter-spacing: 2px;
     color: #f9f9f9;
     font-family: BreakfastDistressed;
+  }
+
+  .services-cntr {
+    display: none;
+  }
+
+  .resp-serv-menu li {
+    padding: 1rem;
   }
 }
