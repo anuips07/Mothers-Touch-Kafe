@@ -104,6 +104,6 @@ code {
 
 @media only screen and (max-width: 768px) {
   .main-cntr {
-    margin: 0 1rem;
+    margin: 0;
   }
 }
