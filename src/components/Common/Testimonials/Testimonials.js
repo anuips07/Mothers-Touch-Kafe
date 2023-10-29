@@ -26,13 +26,13 @@ export default function Testimonials() {
 
       <div className="test-l test-panel">
         <div className="test-header">
-          <img src="/images/testimonials/Msg-Bubble.png" />
+          <img src="/images/testimonials/Msg-Bubble.png" alt="msg-bubble" />
           <h1>Testim</h1>
           <h1 className="resp-test-header">onials</h1>
         </div>
 
         <div className="user-cntr">
-          <img src="/images/testimonials/User-Icon.png" />
+          <img src="/images/testimonials/User-Icon.png" alt="user-icon" />
           <h2>{testData?.name}</h2>
 
           <div className="rating-cntr">

@@ -40,17 +40,17 @@ export default function Menu({ openCakes }) {
   }, [location]);
   return (
     <section>
-      <img src="/images/menu/Menu-Banner.svg" className="menu-header" />
+      <img src="/images/menu/Menu-Banner.svg" className="menu-header" alt="menu banner" />
 
       {MenuList.map((list, index) => {
         return (
           <div key={list.menuType + index} className="menu-cntr">
-            <img className="resp-menu-img" src={list.menuImage} />
+            <img className="resp-menu-img" src={list.menuImage} alt="menu image" />
 
             {(index + 1) % 2 !== 0 && (
               <div className="menu-title menu-title-l">
                 <h1>{list.menuType}</h1>
-                <img src={list.menuImage} />
+                <img src={list.menuImage} alt="menu image" />
               </div>
             )}
 
@@ -71,7 +71,7 @@ export default function Menu({ openCakes }) {
             {(index + 1) % 2 === 0 && (
               <div className="menu-title menu-title-r">
                 <h1>{list.menuType}</h1>
-                <img src={list.menuImage} />
+                <img src={list.menuImage} alt="menu image" />
               </div>
             )}
 

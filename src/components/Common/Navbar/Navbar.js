@@ -70,7 +70,7 @@ export default function Navbar({ contactRef }) {
 
         <div className="nav-list">
           <div className="nav-cta nav-cta-l">
-            <img src="/images/navbar/home-icon.png" onClick={() => redirectPage("")} />
+            <img src="/images/navbar/home-icon.png" onClick={() => redirectPage("")} alt="home-icon" />
           </div>
 
           <ul className="nav-left">
@@ -88,14 +88,14 @@ export default function Navbar({ contactRef }) {
         </div>
 
         <div className="nav-logo" onClick={() => redirectPage("")}>
-          <img src="./logo192.png" />
-          <img className="logo-bg" src="/images/navbar/LogoTag.png" />
+          <img src="./logo192.png" alt="logo" />
+          <img className="logo-bg" src="/images/navbar/LogoTag.png" alt="logo-bg" />
         </div>
 
         <div className="nav-list">
           <div className="nav-cta nav-cta-r">
-            <img src="/images/navbar/question.png" style={{ width: "15px" }} />
-            <img src="/images/navbar/search-icon.png" />
+            <img src="/images/navbar/question.png" style={{ width: "15px" }} alt="question-icon" />
+            <img src="/images/navbar/search-icon.png" alt="search-icon" />
           </div>
 
           <ul className="nav-right">
@@ -149,7 +149,7 @@ export default function Navbar({ contactRef }) {
             </div>
 
             <div className="resp-nav-logo" onClick={() => redirectPage("")}>
-              <img src="./logo192.png" />
+              <img src="./logo192.png" alt="logo" />
               <p>Mother's Touch Kafe</p>
             </div>
           </div>
