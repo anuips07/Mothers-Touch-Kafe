@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import { MenuList } from "./MenuList";
+import { useLocation } from "react-router-dom";
 
-export default function Menu() {
+export default function Menu({ openCakes }) {
   const [openMenu, setOpenMenu] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
 
   const handleMenu = (menu) => {
     if (!openMenu) {
@@ -22,6 +25,19 @@ export default function Menu() {
       document.body.style.overflow = "";
     }
   }, [openMenu]);
+
+  useEffect(() => {
+    if (queryParams.get("menuSelect") === "Cakes") {
+      const cakeMainMenuIndx = MenuList.findIndex((menu) => menu.menuType === "Cakes & Treats");
+      if (cakeMainMenuIndx > -1) {
+        const cakeMenuIndx = MenuList[cakeMainMenuIndx].mainMenu.findIndex((menu) => menu.mainMenuName === "Cakes");
+        if (cakeMenuIndx > -1) {
+          setSelectedMenu(MenuList[cakeMainMenuIndx].mainMenu[cakeMenuIndx]);
+          setOpenMenu(true);
+        }
+      }
+    }
+  }, [location]);
   return (
     <section>
       <img src="/images/menu/Menu-Banner.svg" className="menu-header" />

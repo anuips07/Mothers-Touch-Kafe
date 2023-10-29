@@ -29,6 +29,7 @@
 .nav-list ul li {
   width: 100%;
   text-align: center;
+  position: relative;
 }
 
 .nav-left li {
@@ -43,7 +44,8 @@
   align-items: center;
 }
 
-.nav-list li a {
+.nav-list li a,
+#services {
   width: fit-content;
   font-size: 1.2rem;
   font-weight: 500;
@@ -51,7 +53,11 @@
   color: #d6d5d1;
 }
 
-.nav-list li a p {
+#services {
+  cursor: pointer;
+}
+
+.nav-list li p {
   padding-bottom: 0.25rem;
   border-bottom: 2px solid transparent;
   transition: all 0.2s ease-in-out;
@@ -107,6 +113,50 @@
   top: 25%;
   left: 50%;
   animation: loadLogo 1s forwards ease-out;
+}
+
+.services-cntr {
+  background-color: #f9f9f9;
+  position: absolute;
+  left: 30%;
+  top: 110%;
+  z-index: 1;
+  min-width: 160px;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.33);
+  animation: openServices 0.25s forwards ease-in;
+}
+
+@keyframes openServices {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.3);
+    transform-origin: top center;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.services-cntr ul {
+  flex-direction: column;
+}
+
+.services-cntr li {
+  display: block;
+  padding: 0.5rem;
+  text-align: left !important;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.services-cntr li:hover {
+  background-color: #ffdf08;
+  color: #142432 !important;
 }
 
 @keyframes loadLogo {

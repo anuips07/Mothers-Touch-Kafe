@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Navbar.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -6,8 +6,10 @@ import { useEffect } from "react";
 export default function Navbar({ contactRef }) {
   const location = useLocation();
   const navigate = useNavigate();
+  const serviceRef = useRef(null);
   const [activeNav, setActiveNav] = useState("/");
   const [showMenu, setShowMenu] = useState(false);
+  const [showServices, setShowServices] = useState(false);
 
   const redirectPage = (path) => {
     window.scrollTo(0, 0);
@@ -34,9 +36,31 @@ export default function Navbar({ contactRef }) {
     setShowMenu((prev) => !prev);
   };
 
+  const handleServices = () => {
+    setShowServices((prev) => !prev);
+  };
+
+  const handleCakeService = () => {
+    handleServices();
+    navigate("/Menu?menuSelect=Cakes");
+  };
+
   useEffect(() => {
     setActiveNav(location.pathname.split("/")[1].toLowerCase());
   }, [location]);
+
+  useEffect(() => {
+    const clickOutside = (e) => {
+      if (serviceRef.current && !serviceRef.current.contains(e.target)) {
+        setShowServices(false);
+      }
+    };
+
+    document.addEventListener("click", clickOutside);
+    return () => {
+      document.removeEventListener("click", clickOutside);
+    };
+  });
   return (
     <div className="nav-main-cntr">
       <div className="nav-cntr">
@@ -75,10 +99,21 @@ export default function Navbar({ contactRef }) {
           </div>
 
           <ul className="nav-right">
-            <li>
-              <Link to={"Menu"}>
+            <li ref={serviceRef}>
+              <div id="services" onClick={handleServices}>
                 <p className={activeNav === "services" ? "active-nav" : ""}> Services </p>
-              </Link>
+              </div>
+
+              {showServices && (
+                <div className="services-cntr">
+                  <ul>
+                    <li>Corporate Services</li>
+                    <li>Catering Services</li>
+                    <li onClick={handleCakeService}>Cakes & Treats</li>
+                    <li>One-Stop Beverage</li>
+                  </ul>
+                </div>
+              )}
             </li>
             <li onClick={scrollToContact}>
               <a href="#">
