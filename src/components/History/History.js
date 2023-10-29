@@ -8,7 +8,7 @@ export default function History() {
 
       <div className="history-cntr">
         <div className="history-img">
-          <img src="/images/history/Icon-1.svg" alt="Img1" />
+          <img src="/images/history/icon-1.svg" alt="Img1" />
         </div>
 
         <div className="history-info">
@@ -18,7 +18,7 @@ export default function History() {
 
       <div className="history-cntr">
         <div className="history-img resp-history-img">
-          <img src="/images/history/Img2.png" alt="Img1" />
+          <img src="/images/history/icon-2.svg" alt="Img2" />
         </div>
 
         <div className="history-info">
@@ -26,13 +26,13 @@ export default function History() {
         </div>
 
         <div className="history-img resp-history-img2">
-          <img src="/images/history/Img2.png" alt="Img1" />
+          <img src="/images/history/icon-2.svg" alt="Img2" />
         </div>
       </div>
 
       <div className="history-cntr">
         <div className="history-img">
-          <img src="/images/history/Img3.png" alt="Img1" />
+          <img src="/images/history/icon-3.svg" alt="Img3" />
         </div>
 
         <div className="history-info">
