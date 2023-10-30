@@ -16,10 +16,10 @@ export default function Testimonials() {
   return (
     <div className="test-cntr">
       <div className="test-toggle">
-        <div className={testData?.id === 1 ? "prev-test disabled-toggle" : "prev-test"} disabled={testData?.id === 1} onClick={() => toggleTestimonial("prev")}>
+        <div className={testData?.id === 1 ? "prev-test disabled-toggle" : "prev-test"} onClick={() => toggleTestimonial("prev")}>
           ◀︎
         </div>
-        <div className={testData?.id === TestimonialData.length ? "next-test disabled-toggle" : "next-test"} disabled={testData?.id === TestimonialData.length} onClick={() => toggleTestimonial("next")}>
+        <div className={testData?.id === TestimonialData.length ? "next-test disabled-toggle" : "next-test"} onClick={() => toggleTestimonial("next")}>
           ▶︎
         </div>
       </div>

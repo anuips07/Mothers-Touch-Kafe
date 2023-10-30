@@ -147,7 +147,8 @@
   opacity: 1;
 }
 
-.disabled-toggle:hover {
+.disabled-toggle {
+  pointer-events: none;
   cursor: default !important;
   opacity: 0.3 !important;
 }
