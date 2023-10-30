@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Logo from "../../../logo.svg";
 
-export default function Navbar({ contactRef }) {
+export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
   const location = useLocation();
   const navigate = useNavigate();
   const serviceRef = useRef(null);
@@ -49,6 +49,15 @@ export default function Navbar({ contactRef }) {
       handleMenu();
     }
     navigate("/Menu/Cakes");
+  };
+
+  const showServiceModal = (info) => {
+    setServiceInfo(info);
+    if (showMenu) {
+      handleMenu();
+    }
+    setOpenService(true);
+    handleServices();
   };
 
   useEffect(() => {
@@ -113,10 +122,10 @@ export default function Navbar({ contactRef }) {
               {showServices && (
                 <div className="services-cntr">
                   <ul>
-                    <li>Corporate Services</li>
-                    <li>Catering Services</li>
+                    <li onClick={() => showServiceModal("Corporate")}>Corporate Services</li>
+                    <li onClick={() => showServiceModal("Catering")}>Catering Services</li>
                     <li onClick={handleCakeService}>Cakes & Treats</li>
-                    <li>One-Stop Beverage</li>
+                    <li onClick={() => showServiceModal("One-Stop")}>One-Stop Beverage</li>
                   </ul>
                 </div>
               )}
@@ -159,10 +168,10 @@ export default function Navbar({ contactRef }) {
                   {showRespServices && (
                     <div className="resp-serv-menu">
                       <ul>
-                        <li>Corporate Services</li>
-                        <li>Catering Services</li>
+                        <li onClick={() => showServiceModal("Corporate")}>Corporate Services</li>
+                        <li onClick={() => showServiceModal("Catering")}>Catering Services</li>
                         <li onClick={handleCakeService}>Cakes & Treats</li>
-                        <li>One-Stop Beverage</li>
+                        <li onClick={() => showServiceModal("One-Stop")}>One-Stop Beverage</li>
                       </ul>
                     </div>
                   )}

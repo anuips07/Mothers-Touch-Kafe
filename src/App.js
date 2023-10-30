@@ -4,10 +4,17 @@ import Navbar from "./components/Common/Navbar/Navbar";
 import Contact from "./components/Common/Contact/Contact";
 import MtFooter from "./components/Common/MtFooter/MtFooter";
 import LogoLoader from "./logo.svg";
+import CafeServices from "./components/Common/CafeServices/CafeServices";
 
 export default function App() {
   const [defaultLoader, setDefaultLoader] = useState(true);
   const contactRef = useRef(null);
+  const [openService, setOpenService] = useState(false);
+  const [serviceInfo, setServiceInfo] = useState(null);
+
+  const chatWhatsapp = () => {
+    window.open("https://wa.me/919916174872?text=Hi", "_blank", "noreferrer");
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,13 +30,15 @@ export default function App() {
         </div>
       ) : (
         <>
-          <Navbar contactRef={contactRef} />
+          <Navbar contactRef={contactRef} setOpenService={setOpenService} setServiceInfo={setServiceInfo} />
 
           <Outlet />
 
-          <Contact ref={contactRef} />
+          <Contact ref={contactRef} chatWhatsapp={chatWhatsapp} />
 
           <MtFooter />
+
+          {openService && <CafeServices serviceInfo={serviceInfo} setOpenService={setOpenService} chatWhatsapp={chatWhatsapp} />}
         </>
       )}
     </div>

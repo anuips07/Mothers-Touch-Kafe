@@ -1,0 +1,57 @@
+.services-modal-cntr {
+  background-color: #f9f9f9;
+  min-height: 150px;
+  min-width: 30%;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  animation: openModal 0.25s forwards ease-in;
+}
+
+.close-menu-modal {
+  text-align: right;
+  opacity: 0.3;
+}
+
+.services-modal-cntr p {
+  width: 100%;
+}
+
+.chat-service-btn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: 1px solid #4bc858;
+  background-color: #4bc858;
+  font-size: 1.1rem;
+  color: #f9f9f9;
+  position: relative;
+  width: 150px;
+  text-align: right;
+  font-weight: 500;
+  box-shadow: 1px 1px 5px 1px #00000045;
+  transition: all 0.25s ease-in-out;
+}
+
+.chat-service-btn:hover {
+  filter: brightness(0.85);
+}
+
+.chat-service-btn svg {
+  width: auto;
+  height: 45px;
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 768px) {
+  .services-modal-cntr {
+    width: 90%;
+  }
+}

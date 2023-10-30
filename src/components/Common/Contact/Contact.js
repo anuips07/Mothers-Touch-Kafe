@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import "./Contact.css";
 
 const Contact = forwardRef((props, ref) => {
+  const { chatWhatsapp } = props;
   return (
     <div className="contact-cntr" ref={ref}>
       <div className="contact-l contact-panel">
@@ -14,7 +15,7 @@ const Contact = forwardRef((props, ref) => {
             <img src="/images/contact/insta.png" alt="insta" />
           </div>
 
-          <div className="social-b-border">
+          <div className="social-b-border" onClick={chatWhatsapp}>
             <img src="/images/contact/whatsapp.png" alt="whatsapp" />
           </div>
         </div>

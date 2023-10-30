@@ -29,11 +29,17 @@
 }
 
 .social-b-border {
+  cursor: pointer;
   width: 30px;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #f9f9f9;
   display: grid;
   place-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.social-b-border:hover {
+  filter: invert(0.3);
 }
 
 .map-img {
