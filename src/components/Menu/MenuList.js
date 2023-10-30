@@ -111,7 +111,15 @@ const MenuList = [
     mainMenu: [
       {
         mainMenuName: "Cakes",
+        subMenu: ["Plain cake", "Wheat cake", "Carrot cake", "Banana cake", "Dates cake", "Nuts cake", "Honey cake", "Plum cake"],
+      },
+      {
+        mainMenuName: "Flavours",
         subMenu: ["Vanilla", "Black Forest", "White Forest", "Butterscotch", "Chocolate", "Chocolate Truffle", "White Chocolate Truffle", "Spanish Delight", "Kitkat Truffle", "Pista Forest", "Mocha Coffee", "Orange", "Vancho", "Mango", "Choco Almond", "Tres Leche", "Red Velvet", "Coffee", "Caramel", "Nutty Bubble", "Choco Oreo", "Strawberry", "Pineapple", "Vanilla Toffee", "Green Velvet", "Blue Velvet", "Kitkat & Gems Cake", "German Black Forest", "Rafaello", "Blueberry", "Rasmalai", "Gulab Jamoon", "Rose Milk", "Ferrero Rocher"],
+      },
+      {
+        mainMenuName: "Treats",
+        subMenu: ["Cupcakes", "Mousse Cups", "Cakesicles", "Cake pops", "Cookies", "Jar Cakes", "Chocolates", "Heartsicles", "Brownie", "Donuts"],
       },
     ],
   },
