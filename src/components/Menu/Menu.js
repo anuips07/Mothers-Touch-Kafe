@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import { MenuList } from "./MenuList";
 import { useParams } from "react-router-dom";
+import ProgressiveImage from "react-progressive-graceful-image";
 
 export default function Menu({ openCakes }) {
   const [openMenu, setOpenMenu] = useState(false);
@@ -39,7 +40,9 @@ export default function Menu({ openCakes }) {
   }, [menuSelect]);
   return (
     <section>
-      <img src="/images/menu/Menu-Banner.svg" className="menu-header" alt="menu banner" />
+      <ProgressiveImage delay={3000} src="/images/menu/Menu-Banner.svg" placeholder="/images/menu/Menu-Banner-small.png">
+        {(src) => <img className="menu-header" src={src} alt="menu banner" />}
+      </ProgressiveImage>
 
       {MenuList.map((list, index) => {
         return (
@@ -78,7 +81,6 @@ export default function Menu({ openCakes }) {
           </div>
         );
       })}
-
       {openMenu && (
         <div className="modal-cntr">
           <div className="menu-modal-panel">
