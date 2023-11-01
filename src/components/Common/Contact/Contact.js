@@ -20,7 +20,7 @@ const Contact = forwardRef((props, ref) => {
           </div>
         </div>
 
-        <img className="map-img" src="/images/contact/map.png" alt="map" />
+        <img className="map-img" src="/images/contact/map.png" alt="map" onClick={() => window.open("https://www.google.com/maps/place/12%C2%B059'49.2%22N+77%C2%B037'52.4%22E/@12.9973242,77.62664,16.19z/data=!4m4!3m3!8m2!3d12.9969915!4d77.6312208?hl=en&entry=ttu")} />
       </div>
 
       <div className="contact-r contact-panel">
