@@ -53,7 +53,25 @@ export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
   };
 
   const showServiceModal = (info) => {
-    setServiceInfo(info);
+    let tempObj = {};
+
+    if (info === "Corporate") {
+      tempObj = {
+        title: "Corporate Services",
+        info: "Tech Shop,Live Kitchen,Tea & Coffee Counter,Juice Counter,Bakery Stall,Food service for Corporate Events",
+      };
+    } else if (info === "Catering") {
+      tempObj = {
+        title: "Catering Services",
+        info: null,
+      };
+    } else if (info === "One-Stop") {
+      tempObj = {
+        title: "One-Stop Beverage",
+        info: null,
+      };
+    }
+    setServiceInfo(tempObj);
     if (showMenu) {
       handleMenu();
     }
