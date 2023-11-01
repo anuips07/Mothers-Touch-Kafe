@@ -1,5 +1,6 @@
 {
   "name": "mothers-touch-kafe",
+  "homepage": "www.motherstouchkafe.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
