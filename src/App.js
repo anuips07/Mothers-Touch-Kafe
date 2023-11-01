@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./components/Common/Navbar/Navbar";
 import Contact from "./components/Common/Contact/Contact";
 import MtFooter from "./components/Common/MtFooter/MtFooter";
-import LogoLoader from "./logo.svg";
+import LogoLoader from "./MTF-Icon-White-Logo.svg";
 import CafeServices from "./components/Common/CafeServices/CafeServices";
 
 export default function App() {

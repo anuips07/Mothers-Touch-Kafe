@@ -278,19 +278,10 @@
     display: grid;
     place-items: center;
     padding: 1rem;
-    margin-bottom: 2rem;
   }
 
   .resp-nav-logo img {
-    width: 80px;
-  }
-
-  .resp-nav-logo p {
-    margin-top: 1rem;
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-    color: #f9f9f9;
-    font-family: BreakfastDistressed;
+    width: 200px;
   }
 
   .services-cntr {

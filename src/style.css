@@ -72,12 +72,12 @@ code {
 .default-loader {
   display: grid;
   place-items: center;
-  animation: defaultLoaderAnim infinite 6s linear;
+  animation: defaultLoaderAnim infinite 4s linear;
 }
 
 @keyframes defaultLoaderAnim {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(-90deg);
   }
 
   100% {

@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 import "./Navbar.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import Logo from "../../../logo.svg";
+import LogoFull from "../../../MTF-Text-Primary-Logo_White.svg";
+import Logo from "../../../MTF-Icon-Primary-Logo.svg";
 
 export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
   const location = useLocation();
@@ -183,8 +184,8 @@ export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
             </div>
 
             <div className="resp-nav-logo" onClick={() => redirectPage("")}>
-              <img src={Logo} alt="logo" />
-              <p>Mother's Touch Kafe</p>
+              <img src={LogoFull} alt="logo" />
+              {/* <p>Mother's Touch Kafe</p> */}
             </div>
           </div>
         </div>
