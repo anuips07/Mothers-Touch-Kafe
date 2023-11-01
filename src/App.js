@@ -13,7 +13,7 @@ export default function App() {
   const [serviceInfo, setServiceInfo] = useState(null);
 
   const chatWhatsapp = () => {
-    window.open("https://wa.me/919916174872?text=Hi", "_blank", "noreferrer");
+    window.open("https://wa.me/919742837104?text=Hi", "_blank", "noreferrer");
   };
 
   useEffect(() => {
