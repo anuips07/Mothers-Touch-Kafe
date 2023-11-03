@@ -1,15 +1,24 @@
 import React, { forwardRef } from "react";
 import "./Contact.css";
+import { Link } from "react-router-dom";
 
 const Contact = forwardRef((props, ref) => {
   const { chatWhatsapp } = props;
+  const mailId = "info@motherstouch.com";
+
+  const handleMail = (e) => {
+    window.location.href = `mailto:${mailId}`;
+    e.preventDefault();
+  };
   return (
     <div className="contact-cntr" ref={ref}>
       <div className="contact-l contact-panel">
         <div className="social-cta">
-          <div className="social-b-border">
-            <img src="/images/contact/mail.png" style={{ height: "30px", width: "auto" }} alt="mail" />
-          </div>
+          <Link to="#" onClick={handleMail}>
+            <div className="social-b-border">
+              <img src="/images/contact/mail.png" style={{ height: "30px", width: "auto" }} alt="mail" />
+            </div>
+          </Link>
 
           <div className="social-b-border">
             <img src="/images/contact/linkedin.png" style={{ height: "30px", width: "auto" }} alt="linkedin" />
@@ -36,7 +45,7 @@ const Contact = forwardRef((props, ref) => {
 
         <div className="contact-info">
           <p>Ph: +91-9742837104</p>
-          <p>Email: info@motherstouch.com</p>
+          <p>Email: {mailId}</p>
           <p>www.motherstouchkafe.com</p>
           <p>#21, K R Palya, Cox Town, Jeevanahalli, Bangalore 560005</p>
         </div>
