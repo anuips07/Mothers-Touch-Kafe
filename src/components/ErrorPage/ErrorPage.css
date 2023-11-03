@@ -1,0 +1,41 @@
+.error-main-cntr {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.error-cntr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.error-cntr img {
+  max-width: 200px;
+  height: auto;
+}
+
+.error-cntr h1 {
+  color: #f9f9f9;
+  font-size: 2.5rem;
+  text-align: center;
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: #ffdf08;
+}
+
+.error-cntr button {
+  font-size: 1.1rem;
+  padding: 1rem;
+  border: 1px solid #ffdf08;
+  border-radius: 5px;
+  color: #ffdf08;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.error-cntr button:hover {
+  background-color: #ffdf08;
+  color: #142432;
+}

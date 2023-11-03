@@ -203,7 +203,6 @@ export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
 
             <div className="resp-nav-logo" onClick={() => redirectPage("")}>
               <img src={LogoFull} alt="logo" />
-              {/* <p>Mother's Touch Kafe</p> */}
             </div>
           </div>
         </div>
