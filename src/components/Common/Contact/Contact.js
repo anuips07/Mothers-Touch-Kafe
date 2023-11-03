@@ -8,6 +8,14 @@ const Contact = forwardRef((props, ref) => {
       <div className="contact-l contact-panel">
         <div className="social-cta">
           <div className="social-b-border">
+            <img src="/images/contact/mail.png" style={{ height: "30px", width: "auto" }} alt="mail" />
+          </div>
+
+          <div className="social-b-border">
+            <img src="/images/contact/linkedin.png" style={{ height: "30px", width: "auto" }} alt="linkedin" />
+          </div>
+
+          <div className="social-b-border">
             <img src="/images/contact/fb.png" style={{ height: "30px", width: "auto" }} alt="fb" />
           </div>
 
