@@ -114,12 +114,12 @@
 }
 
 .nav-logo img {
-  height: 100px;
+  height: 80px;
   width: auto;
   position: absolute;
   top: 25%;
   left: 50%;
-  animation: loadLogo 1s forwards ease-out;
+  transform: translate(-50%, -25%) rotate(0deg);
 }
 
 .services-cntr {
@@ -166,16 +166,6 @@
   color: #142432 !important;
 }
 
-@keyframes loadLogo {
-  0% {
-    transform: translate(-50%, -25%) rotate(-90deg);
-  }
-
-  100% {
-    transform: translate(-50%, -25%) rotate(0deg);
-  }
-}
-
 @media only screen and (max-width: 768px) {
   .menu-hamburger {
     display: block;
@@ -198,7 +188,7 @@
   }
 
   .nav-logo img {
-    height: 60px;
+    height: 50px;
     left: 50%;
     top: 16%;
   }
@@ -209,7 +199,6 @@
 
   .resp-menu {
     display: block;
-    background-color: #ffde0819;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -232,7 +221,7 @@
   }
 
   .resp-menu-cntr {
-    background-color: #142432;
+    background-color: white;
     width: 80%;
     height: 100vh;
     overflow-y: scroll;
@@ -245,7 +234,7 @@
   .close-resp-menu {
     width: 50px;
     height: 50px;
-    fill: #ffdf08;
+    fill: #142432;
   }
 
   .resp-menu ul {
@@ -253,15 +242,15 @@
   }
 
   .resp-menu li {
-    color: #f9f9f9;
     padding: 2rem 1rem;
     transition: all 0.25s ease-in;
   }
 
   .resp-menu p {
     text-decoration: none;
-    color: #f9f9f9;
+    color: #142432;
     font-size: 1.2rem;
+    font-weight: 500;
   }
 
   .active-nav {

@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import "./Navbar.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import LogoFull from "../../../MTF-Text-Primary-Logo_White.svg";
-import Logo from "../../../MTF-Icon-Primary-Logo.svg";
+import LogoFull from "../../../logo.jpg";
+// import Logo from "../../../MTF-Icon-Primary-Logo.svg";
 
 export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
   const location = useLocation();
@@ -122,7 +122,7 @@ export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
         </div>
 
         <div className="nav-logo" onClick={() => redirectPage("")}>
-          <img src={Logo} alt="logo" />
+          <img src={LogoFull} alt="logo" />
           <img className="logo-bg" src="/images/navbar/LogoTag.png" alt="logo-bg" />
         </div>
 

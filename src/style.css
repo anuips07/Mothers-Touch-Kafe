@@ -72,21 +72,28 @@ code {
 .default-loader {
   display: grid;
   place-items: center;
-  animation: defaultLoaderAnim infinite 4s linear;
+  animation: defaultLoaderAnim infinite 1.4s linear;
 }
 
 @keyframes defaultLoaderAnim {
   0% {
-    transform: rotate(-90deg);
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.95);
   }
 
   100% {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
 .default-loader img {
-  width: 130px;
+  width: 150px;
   height: auto;
 }
 
