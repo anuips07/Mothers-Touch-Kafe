@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./History.css";
+import { ImageShimmer } from "../Common/ImageShimmer/ImageShimmer";
 
 export default function History() {
+  const [homeBannerLoad, setHomeBannerLoad] = useState(true);
   return (
     <section>
-      <img src="/images/history/History-Header.jpg" className="menu-header" alt="history banner" />
+      {homeBannerLoad && <ImageShimmer />}
+      <img src="/images/history/History-Header.jpg" className="menu-header" alt="history banner" onLoad={() => setHomeBannerLoad(false)} />
 
       <div className="history-cntr">
         <div className="history-img">

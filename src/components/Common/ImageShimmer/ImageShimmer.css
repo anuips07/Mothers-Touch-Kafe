@@ -1,0 +1,25 @@
+.img-shimmer-cntrr {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: #f6f7f8;
+  overflow: hidden;
+}
+
+.img-ph-cntr {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #f6f7f8 10%, #eeeeee 15%, #bbbbbb7b 30%, #eeeeee 50%, #f6f7f8 60%);
+  position: relative;
+  animation: shimmer 2s linear infinite forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(130%);
+  }
+}

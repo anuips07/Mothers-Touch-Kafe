@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import { MenuList } from "./MenuList";
 import { useParams } from "react-router-dom";
-import ProgressiveImage from "react-progressive-graceful-image";
+import { ImageShimmer } from "../Common/ImageShimmer/ImageShimmer";
 
 export default function Menu({ openCakes }) {
   const [openMenu, setOpenMenu] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
+  const [menuBannerLoad, setMenuBannerLoad] = useState(true);
   const { menuSelect } = useParams();
 
   const handleMenu = (menu) => {
@@ -40,9 +41,8 @@ export default function Menu({ openCakes }) {
   }, [menuSelect]);
   return (
     <section>
-      <ProgressiveImage delay={3000} src="/images/menu/Menu-Banner.svg" placeholder="/images/menu/Menu-Banner-small.png">
-        {(src) => <img className="menu-header" src={src} alt="menu banner" />}
-      </ProgressiveImage>
+      {menuBannerLoad && <ImageShimmer />}
+      <img className="menu-header" src="/images/menu/Menu-Banner.svg" alt="menu banner" onLoad={() => setMenuBannerLoad(false)} />
 
       {MenuList.map((list, index) => {
         return (

@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import { Link, useNavigate } from "react-router-dom";
 import Testimonials from "../Common/Testimonials/Testimonials";
-import ProgressiveImage from "react-progressive-graceful-image";
 import GReview from "../../g_review.png";
+import { ImageShimmer } from "../Common/ImageShimmer/ImageShimmer";
 
 export default function Home() {
   const navigate = useNavigate();
+  const [homeBannerLoad, setHomeBannerLoad] = useState(true);
+  const [menuBannerLoad, setMenuBannerLoad] = useState(true);
 
   const handleMenu = () => {
     window.scrollTo(0, 0);
@@ -14,18 +16,17 @@ export default function Home() {
   };
   return (
     <section className="home-cntr">
-      <ProgressiveImage delay={3000} src="/images/home/TasteHome.png" placeholder="/images/home/TasteHome-small.png">
-        {(src) => <img className="taste-home" src={src} alt="home banner" />}
-      </ProgressiveImage>
+      {homeBannerLoad && <ImageShimmer />}
+
+      <img className="taste-home" src="/images/home/TasteHome.png" alt="home banner" onLoad={() => setHomeBannerLoad(false)} />
 
       <div className="about-cntr">
         <h1>About us</h1>
         <p>Mother's Touch Kafe, a haven of culinary delights, stands as a testament to the profound connection between nourishment and flourishing. With our poignant tagline "Nourish to Flourish," we transcend the conventional notions of food, infusing every creation with the nurturing essence of a mother's care. Since our inception in 2020 within the vibrant city of Bangalore, we have blossomed into a global epicenter of delectable experiences, bridging palates and hearts through our newly launched website.</p>
       </div>
 
-      <ProgressiveImage delay={3000} src="/images/home/Menu.png" placeholder="/images/home/Menu-small.png">
-        {(src) => <img className="menu-home" onClick={handleMenu} src={src} alt="menu banner" />}
-      </ProgressiveImage>
+      {menuBannerLoad && <ImageShimmer />}
+      <img className="menu-home" onClick={handleMenu} src="/images/home/Menu.png" alt="menu banner" onLoad={() => setMenuBannerLoad(false)} />
 
       <Testimonials />
 
