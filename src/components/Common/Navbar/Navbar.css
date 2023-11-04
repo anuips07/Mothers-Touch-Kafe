@@ -242,7 +242,7 @@
   }
 
   .resp-menu li {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     transition: all 0.25s ease-in;
   }
 
@@ -266,7 +266,10 @@
   .resp-nav-logo {
     display: grid;
     place-items: center;
-    padding: 1rem;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    transform: translate(-15%, -10%);
   }
 
   .resp-nav-logo img {
