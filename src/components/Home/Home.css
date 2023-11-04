@@ -34,6 +34,24 @@
   cursor: pointer;
 }
 
+.g-rev-cntr {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  width: 75px;
+  padding: 0.25rem;
+  background-color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.362);
+}
+
+.g-rev-cntr img {
+  width: 100%;
+  height: auto;
+}
+
 @media only screen and (max-width: 768px) {
   .about-cntr {
     margin: 1rem;

@@ -1,8 +1,9 @@
 import React from "react";
 import "./Home.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Testimonials from "../Common/Testimonials/Testimonials";
 import ProgressiveImage from "react-progressive-graceful-image";
+import GReview from "../../g_review.png";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -27,6 +28,12 @@ export default function Home() {
       </ProgressiveImage>
 
       <Testimonials />
+
+      <Link to="#" onClick={(e) => window.open("https://www.google.com", "_blank", "noreferrer")}>
+        <div className="g-rev-cntr">
+          <img src={GReview} alt="Google Review Icon" />
+        </div>
+      </Link>
     </section>
   );
 }
