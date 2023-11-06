@@ -5,6 +5,7 @@ import Contact from "./components/Common/Contact/Contact";
 import MtFooter from "./components/Common/MtFooter/MtFooter";
 import LogoLoader from "./logo.png";
 import CafeServices from "./components/Common/CafeServices/CafeServices";
+import { ImageShimmer } from "./components/Common/ImageShimmer/ImageShimmer";
 
 export default function App() {
   const [defaultLoader, setDefaultLoader] = useState(true);

@@ -3,14 +3,16 @@
   place-items: center;
   width: 100%;
   height: 150px;
-  background-color: #f6f7f8;
+  background-color: #f6f7f84b;
   overflow: hidden;
+  border-radius: 5px;
+  margin: 1rem 0;
 }
 
 .img-ph-cntr {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #f6f7f8 10%, #eeeeee 15%, #bbbbbb7b 30%, #eeeeee 50%, #f6f7f8 60%);
+  background: linear-gradient(to right, #f6f7f800 2%, #eeeeee37 15%, #bbbbbb07 30%, #eeeeee20 30%, #f6f7f800 30%);
   position: relative;
   animation: shimmer 2s linear infinite forwards;
 }
