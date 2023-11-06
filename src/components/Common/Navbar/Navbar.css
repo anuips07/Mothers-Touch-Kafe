@@ -114,7 +114,7 @@
 }
 
 .nav-logo img {
-  height: 80px;
+  height: 140px;
   width: auto;
   position: absolute;
   top: 25%;
@@ -188,7 +188,7 @@
   }
 
   .nav-logo img {
-    height: 50px;
+    height: 80px;
     left: 50%;
     top: 16%;
   }

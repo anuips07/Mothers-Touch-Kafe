@@ -79,17 +79,27 @@ code {
   0% {
     opacity: 1;
     transform: scale(1);
+    filter: saturate(1);
   }
 
   50% {
     opacity: 0.5;
     transform: scale(0.95);
+    filter: saturate(0);
   }
 
   100% {
     opacity: 1;
     transform: scale(1);
+    filter: saturate(2);
   }
+}
+
+.loader-img-cntr {
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0.5rem;
 }
 
 .default-loader img {

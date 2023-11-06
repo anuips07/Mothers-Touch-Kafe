@@ -2,8 +2,7 @@ import React, { useRef, useState } from "react";
 import "./Navbar.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import LogoFull from "../../../logo.jpg";
-// import Logo from "../../../MTF-Icon-Primary-Logo.svg";
+import LogoFull from "../../../logo.png";
 
 export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
   const location = useLocation();
