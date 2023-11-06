@@ -25,7 +25,7 @@ export default function History() {
         </div>
 
         <div className="history-info">
-          <p>Mother's Touch Kafe is a renowned establishment known for its exceptional corporate services, catering expertise, and cake orders. With an impressive track record of six years, they have successfully catered to esteemed MNCs including Concentric for two years, JPMC (JP Morgan) for two years, and Northern Trust for one year. Additionally, they have collaborated with WeWork for six months, providing top-notch catering services during their corporate events. The Kafe also features a Live Kitchen, Tech Shop, Juice Center, and a convenient One-Stop Beverages counter for tea and coffee enthusiasts. Their dedication to quality and customer satisfaction sets them apart in the industry.</p>
+          <p>We are known for the exceptional corporate services, catering expertise and cake orders. With an impressive track record of six years, we have successfully catered to esteemed MNCs including Concentric for two years, JPMC (JP Morgan) for two years, and Northern Trust for one year. Additionally, we have collaborated with WeWork for six months, providing top-notch catering services during their corporate events. The Kafe also features a Live Kitchen, Tech Shop, Juice Center, and a convenient One-Stop Beverages counter for tea and coffee enthusiasts. Our dedication to quality and customer satisfaction sets us apart in the industry.</p>
         </div>
 
         <div className="history-img resp-history-img2">
@@ -39,7 +39,7 @@ export default function History() {
         </div>
 
         <div className="history-info">
-          <p>Beyond numbers, it's the shared moments of joy that define our legacy. With a personal touch, we've had the privilege of serving and sharing in the happiness of over 2000 patrons, etching unforgettable memories. Notably, our cakes have graced the tables of 100 discerning customers, infusing sweetness into their special moments. From intimate gatherings to opulent wedding affairs, Mother's Touch Kafe has emerged as the go-to choice for those seeking to weave flavor into their cherished events.</p>
+          <p>Beyond numbers, it's the shared moments of joy that define our legacy. With a personal touch, we've had the privilege of serving and sharing in the happiness of over 3000 patrons, etching unforgettable memories. Notably, our cakes have graced the tables of 300 discerning customers, infusing sweetness into their special moments. From intimate gatherings to opulent wedding affairs, Mother's Touch Kafe has emerged as the go-to choice for those seeking to weave flavor into their cherished events.</p>
         </div>
       </div>
     </section>
