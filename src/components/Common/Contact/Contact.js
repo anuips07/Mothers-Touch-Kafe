@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Contact = forwardRef((props, ref) => {
   const { chatWhatsapp } = props;
-  const mailId = "info@motherstouch.com";
+  const mailId = "info@motherstouchkafe.com";
 
   const handleMail = (e) => {
     window.location.href = `mailto:${mailId}`;
@@ -28,9 +28,11 @@ const Contact = forwardRef((props, ref) => {
             <img src="/images/contact/fb.png" style={{ height: "30px", width: "auto" }} alt="fb" />
           </div>
 
-          <div className="social-b-border">
-            <img src="/images/contact/insta.png" alt="insta" />
-          </div>
+          <Link to="#" onClick={() => window.open("https://instagram.com/mothers_touch_kafe?igshid=OGQ5ZDc2ODk2ZA==", "_blank", "noreferrer")}>
+            <div className="social-b-border">
+              <img src="/images/contact/insta.png" alt="insta" />
+            </div>
+          </Link>
 
           <div className="social-b-border" onClick={chatWhatsapp}>
             <img src="/images/contact/whatsapp.png" alt="whatsapp" />
