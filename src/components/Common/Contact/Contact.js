@@ -20,9 +20,9 @@ const Contact = forwardRef((props, ref) => {
             </div>
           </Link>
 
-          <div className="social-b-border">
+          {/* <div className="social-b-border">
             <img src="/images/contact/linkedin.png" style={{ height: "30px", width: "auto" }} alt="linkedin" />
-          </div>
+          </div> */}
 
           <div className="social-b-border">
             <img src="/images/contact/fb.png" style={{ height: "30px", width: "auto" }} alt="fb" />

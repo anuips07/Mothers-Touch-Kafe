@@ -30,7 +30,7 @@ export default function Home() {
 
       <Testimonials />
 
-      <Link to="#" onClick={(e) => window.open("https://www.google.com", "_blank", "noreferrer")}>
+      <Link to="#" onClick={(e) => window.open("https://g.page/r/CWCR9hs9A-45EAI/review", "_blank", "noreferrer")}>
         <div className="g-rev-cntr">
           <img src={GReview} alt="Google Review Icon" />
         </div>
