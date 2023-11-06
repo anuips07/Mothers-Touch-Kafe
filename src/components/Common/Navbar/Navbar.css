@@ -94,6 +94,7 @@
   justify-content: right;
   gap: 2rem;
   align-items: center;
+  min-height: 20px;
 }
 
 .nav-logo {

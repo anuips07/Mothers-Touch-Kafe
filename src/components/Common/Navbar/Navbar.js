@@ -127,8 +127,8 @@ export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
 
         <div className="nav-list">
           <div className="nav-cta nav-cta-r">
-            <img src="/images/navbar/question.png" style={{ width: "15px" }} alt="question-icon" />
-            <img src="/images/navbar/search-icon.png" alt="search-icon" />
+            {/* <img src="/images/navbar/question.png" style={{ width: "15px" }} alt="question-icon" />
+            <img src="/images/navbar/search-icon.png" alt="search-icon" /> */}
           </div>
 
           <ul className="nav-right">
