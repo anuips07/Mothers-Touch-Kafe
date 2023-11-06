@@ -24,9 +24,11 @@ const Contact = forwardRef((props, ref) => {
             <img src="/images/contact/linkedin.png" style={{ height: "30px", width: "auto" }} alt="linkedin" />
           </div> */}
 
-          <div className="social-b-border">
-            <img src="/images/contact/fb.png" style={{ height: "30px", width: "auto" }} alt="fb" />
-          </div>
+          <Link to="#" onClick={() => window.open("https://www.facebook.com/profile.php?id=61553165404237&is_tour_dismissed=true", "_blank", "noreferrer")}>
+            <div className="social-b-border">
+              <img src="/images/contact/fb.png" style={{ height: "30px", width: "auto" }} alt="fb" />
+            </div>
+          </Link>
 
           <Link to="#" onClick={() => window.open("https://instagram.com/mothers_touch_kafe?igshid=OGQ5ZDc2ODk2ZA==", "_blank", "noreferrer")}>
             <div className="social-b-border">
