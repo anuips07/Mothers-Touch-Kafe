@@ -225,7 +225,6 @@
     background-color: white;
     width: 80%;
     height: 100vh;
-    overflow-y: scroll;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -240,6 +239,8 @@
 
   .resp-menu ul {
     list-style: none;
+    max-height: 50vh;
+    overflow-y: scroll;
   }
 
   .resp-menu li {
@@ -252,6 +253,13 @@
     color: #142432;
     font-size: 1.2rem;
     font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .resp-menu p span {
+    color: #223a4fce;
+    font-size: 1.05rem;
   }
 
   .active-nav {
@@ -267,10 +275,7 @@
   .resp-nav-logo {
     display: grid;
     place-items: center;
-    position: absolute;
-    bottom: 10%;
-    left: 20%;
-    transform: translate(-15%, -10%);
+    width: 100%;
   }
 
   .resp-nav-logo img {
@@ -283,5 +288,11 @@
 
   .resp-serv-menu li {
     padding: 1rem;
+  }
+
+  .resp-serv-menu li::before {
+    content: "➤";
+    margin-right: 0.75rem;
+    color: #1424325e;
   }
 }

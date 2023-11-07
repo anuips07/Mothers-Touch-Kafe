@@ -180,7 +180,10 @@ export default function Navbar({ contactRef, setOpenService, setServiceInfo }) {
                     onClick={() => {
                       setShowRespServices((prev) => !prev);
                     }}>
-                    <p className={activeNav === "services" ? "active-nav" : ""}> Services </p>
+                    <p className={activeNav === "services" ? "active-nav" : ""}>
+                      {" "}
+                      Services <span style={{ transform: showRespServices ? "rotate(90deg)" : "rotate(0)" }}>▶︎</span>
+                    </p>
                   </div>
 
                   {showRespServices && (
