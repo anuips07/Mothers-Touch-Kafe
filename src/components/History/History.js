@@ -11,7 +11,7 @@ export default function History() {
 
       <div className="history-cntr">
         <div className="history-img">
-          <img src="/images/history/icon-1.svg" alt="history icon 1" />
+          <img src="/images/history/history-1.svg" alt="history icon 1" />
         </div>
 
         <div className="history-info">
