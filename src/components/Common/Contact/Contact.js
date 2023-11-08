@@ -48,7 +48,7 @@ const Contact = forwardRef((props, ref) => {
         <h1>Contact</h1>
 
         <div className="contact-info">
-          <p>Ph: +91-9742837104</p>
+          <p>Ph: +91-9742837104 | +91-8088670687</p>
           <p>Email: info@motherstouchkafe.com | motherstouchkafe@gmail.com</p>
           <p>www.motherstouchkafe.com</p>
           <p>#21, K R Palya, Cox Town, Jeevanahalli, Bangalore 560005</p>

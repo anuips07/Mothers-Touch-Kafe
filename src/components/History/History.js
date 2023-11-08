@@ -25,7 +25,7 @@ export default function History() {
         </div>
 
         <div className="history-info">
-          <p>We are known for the exceptional corporate services, catering expertise and cake orders. With an impressive track record of six years, we have successfully catered to esteemed MNCs including Concentric for two years, JPMC (JP Morgan) for two years, and Northern Trust for one year. Additionally, we have collaborated with WeWork for six months, providing top-notch catering services during their corporate events. The Kafe also features a Live Kitchen, Tech Shop, Juice Center, and a convenient One-Stop Beverages counter for tea and coffee enthusiasts. Our dedication to quality and customer satisfaction sets us apart in the industry.</p>
+          <p>We are known for the exceptional corporate services, catering expertise and cake orders. With an impressive track record of six years, we have successfully catered to esteemed MNCs including Concentric, JPMC (JP Morgan), and Northern Trust. Additionally, we have collaborated with WeWork, providing top-notch catering services during their corporate events. The Kafe also features a Live Kitchen, Tech Shop, Juice Center, and a convenient One-Stop Beverages counter for tea and coffee enthusiasts. Our dedication to quality and customer satisfaction sets us apart in the industry.</p>
         </div>
 
         <div className="history-img resp-history-img2">
